@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+    <type type="windows.DeployedAppSettings" deployable-type="windows.AppSettings" container-type="overthere.Host" extends="powershell.ExtensiblePowerShellDeployed" description="App Settings">
+        <generate-deployable type="windows.AppSettings" extends="powershell.BasePowerShellDeployable" description="AppSettings to deploy." />
+
+        <property name="createScript" default="windows/deploy-settings.ps1" hidden="true" />
+        <property name="createVerb" default="Deploy" hidden="true" />
+        <property name="destroyScript" default="windows/undeploy-settings.ps1" hidden="true" />
+        <property name="destroyVerb" default="Undeploy" hidden="true" />        
+
+        <property name="settings" kind="map_string_string" required="false" description="AppSettings to apply. See [https://msdn.microsoft.com/en-us/library/aa903313(v=vs.71).aspx]." />
+    </type>
+
+    <type type="windows.DeployedConnectionStrings" deployable-type="windows.ConnectionStrings" container-type="overthere.Host" extends="powershell.ExtensiblePowerShellDeployed" description="Connection Strings">
+        <generate-deployable type="windows.ConnectionStrings" extends="powershell.BasePowerShellDeployable" description="Connection strings to deploy." />
+
+        <property name="createScript" default="windows/deploy-connection-string.ps1" hidden="true" />
+        <property name="createVerb" default="Deploy" hidden="true" />
+        <property name="destroyScript" default="windows/undeploy-connection-string.ps1" hidden="true" />
+        <property name="destroyVerb" default="Undeploy" hidden="true" />           
+
+        <property name="connectionStrings" kind="set_of_ci" referenced-type="windows.DeployedConnectionString" as-containment="true" description="Connection string to add to the config. See [https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files]." />
+    </type>
+
+    <type type="windows.DeployedConnectionString" deployable-type="windows.ConnectionString" container-type="windows.DeployedConnectionStrings" extends="udm.BaseEmbeddedDeployed" description="Connection String">
+        <generate-deployable type="windows.ConnectionString" extends="udm.BaseEmbeddedDeployable" description="Specification of connecting string"/>
+
+        <property name="connectionStringName" required="true" description="Name of the connection string."/>
+        <property name="connectionString" required="true" description="The connection string."/>
+        <property name="providerName" required="true" description="The provider name."/>
+    </type>
+
+    <type-modification type="windows.ConnectionStrings">
+        <property name="connectionStrings" kind="set_of_ci" referenced-type="windows.ConnectionString" as-containment="true" description="Connection string to add to the config. See [https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files]." />
+    </type-modification>
+
+</synthetic>
