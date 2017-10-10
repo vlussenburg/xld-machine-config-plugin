@@ -36,6 +36,7 @@
         <generate-deployable type="windows.ConnectionString" extends="udm.BaseEmbeddedDeployable" description="Specification of connecting string"/>
 
         <property name="connectionStringName" required="true" description="Name of the connection string."/>
+        <property name="password" password="true" required="false" description="The password for the connection string. Will be appended at the end of the connection string as such: ;Password=[password]" />
         <property name="connectionString" required="true" description="The connection string."/>
         <property name="providerName" required="true" description="The provider name."/>
     </type>

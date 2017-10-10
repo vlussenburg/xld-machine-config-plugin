@@ -13,15 +13,20 @@ foreach ( $config in $configs.GetEnumerator() ) {
 
     Write-Host "Applying Connection Strings."
     foreach ( $connectionString in $connectionStrings.GetEnumerator() ) {
-        Write-Host "Applying Connection String [$connectionString.connectionStringName]."
-        $connectionStringObj = New-Object System.Configuration.ConnectionStringSettings($connectionString.connectionStringName, $connectionString.connectionString, $connectionString.providerName)
-        $connectionStringObj
+        Write-Host "Applying Connection String [$($connectionString.connectionStringName)]."
+
+        $connectionStringValue = $connectionString.connectionString
+        if ($connectionString.password) {
+            $connectionStringValue += ";Password=$($connectionString.password)"
+        }
+
+        $connectionStringObj = New-Object System.Configuration.ConnectionStringSettings($connectionString.connectionStringName, $connectionStringValue, $connectionString.providerName)
+
         $machineConfig.ConnectionStrings.ConnectionStrings.Add($connectionStringObj)
     }
 
     Write-Host ""
     Write-Host "Applied Connection Strings."
-    $machineConfig.ConnectionStrings.ConnectionStrings
 
     Write-Host ""
     Write-Host "Saving config."

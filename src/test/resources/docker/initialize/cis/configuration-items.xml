@@ -63,17 +63,19 @@
     </windows.AppSettings>
     <windows.ConnectionString id="Applications/windows-app/1.0.0/connections/string1" created-by="admin" created-at="2017-10-02T20:11:59.584+0000" last-modified-by="admin" last-modified-at="2017-10-02T20:11:59.584+0000">
       <connectionStringName>TransBrokerDB</connectionStringName>
-      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Password=password;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
+      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
+      <password>password</password>
       <providerName>System.Data.SqlClient</providerName>
     </windows.ConnectionString>
     <windows.ConnectionString id="Applications/windows-app/2.0.0/connections/string1" created-by="admin" created-at="2017-10-02T20:11:59.584+0000" last-modified-by="admin" last-modified-at="2017-10-02T20:26:36.644+0000">
       <connectionStringName>TransBrokerDB</connectionStringName>
-      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Password=password123;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
+      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
       <providerName>System.Data.SqlClient</providerName>
+      <password>password123</password>
     </windows.ConnectionString>
     <windows.ConnectionString id="Applications/windows-app/1.0.0/connections/string2" created-by="admin" created-at="2017-10-02T20:11:59.587+0000" last-modified-by="admin" last-modified-at="2017-10-02T20:11:59.587+0000">
       <connectionStringName>TransBrokerDB2</connectionStringName>
-      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Password=password;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
+      <connectionString>Data Source=10.5.4.100;Initial Catalog=TransBroker;Integrated Security=True;User ID=TransBroker;Trusted_Connection=False; MultipleActiveResultSets=True;</connectionString>
       <providerName>System.Data.SqlClient</providerName>
     </windows.ConnectionString>
     <overthere.CifsHost id="Infrastructure/win2008r2x64" created-by="admin" created-at="2017-10-02T20:11:59.564+0000" last-modified-by="admin" last-modified-at="2017-10-02T20:11:59.564+0000">
