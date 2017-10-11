@@ -4,11 +4,11 @@
 [![License: MIT][xld-machine-config-windows-plugin-license-image]][xld-machine-config-windows-plugin-license-url]
 ![Github All Releases][xld-machine-config-windows-plugin-downloads-image]
 
-[xld-machine-config-windows-plugin-travis-image]: https://travis-ci.org/xebialabs-community/LCPLUGINNAME.svg?branch=master
-[xld-machine-config-windows-plugin-travis-url]: https://travis-ci.org/xebialabs-community/LCPLUGINNAME
+[xld-machine-config-windows-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-machine-config-windows-plugin.svg?branch=master
+[xld-machine-config-windows-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-machine-config-windows-plugin
 [xld-machine-config-windows-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
 [xld-machine-config-windows-plugin-license-url]: https://opensource.org/licenses/MIT
-[xld-machine-config-windows-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/LCPLUGINNAME/total.svg
+[xld-machine-config-windows-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xld-machine-config-windows-plugin/total.svg
 
 ## Preface
 See the [XL Deploy reference manual](https://docs.xebialabs.com/xl-deploy) for background information on XL Deploy and deployment automation concepts.
