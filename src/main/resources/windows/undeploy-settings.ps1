@@ -2,17 +2,9 @@ $settings = $deployed.settings
 
 [System.Reflection.Assembly]::LoadWithPartialName("System.Configuration")
 
-$configs = (
-    "$($env:SystemRoot)\Microsoft.NET\Framework\v4.0.30319\Config\machine.config", 
-    "$($env:SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config"
-)
+$machineConfigs = Get-MachineConfigManagers
 
-foreach ( $config in $configs.GetEnumerator() ) {
-    $configFileMap = New-Object System.Configuration.ConfigurationFileMap($config)
-    $configFileMap
-
-    $machineConfig = [System.Configuration.ConfigurationManager]::OpenMappedMachineConfiguration($configFileMap)
-    $machineConfig
+foreach ( $machineConfig in $machineConfigs.GetEnumerator() ) {
 
     Write-Host "Removing settings for $config."
     foreach ( $setting in $settings.GetEnumerator() ) {

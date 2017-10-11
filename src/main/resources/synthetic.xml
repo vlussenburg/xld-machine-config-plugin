@@ -19,6 +19,7 @@
         <property name="destroyVerb" default="Undeploy" hidden="true" />        
 
         <property name="settings" kind="map_string_string" required="false" description="AppSettings to apply. See [https://msdn.microsoft.com/en-us/library/aa903313(v=vs.71).aspx]." />
+        <property name="libraryScripts" kind="list_of_string" default="windows/common.psm1" hidden="true" />
     </type>
 
     <type type="windows.DeployedConnectionStrings" deployable-type="windows.ConnectionStrings" container-type="overthere.Host" extends="powershell.ExtensiblePowerShellDeployed" description="Connection Strings">
@@ -30,6 +31,8 @@
         <property name="destroyVerb" default="Undeploy" hidden="true" />           
 
         <property name="connectionStrings" kind="set_of_ci" referenced-type="windows.DeployedConnectionString" as-containment="true" description="Connection string to add to the config. See [https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files]." />
+
+        <property name="libraryScripts" kind="list_of_string" default="windows/common.psm1" hidden="true" />
     </type>
 
     <type type="windows.DeployedConnectionString" deployable-type="windows.ConnectionString" container-type="windows.DeployedConnectionStrings" extends="udm.BaseEmbeddedDeployed" description="Connection String">
