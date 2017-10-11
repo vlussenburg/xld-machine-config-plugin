@@ -11,11 +11,6 @@
 [xld-machine-config-windows-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/LCPLUGINNAME/total.svg
 
 ## Preface
-
-This document describes the functionality provided by the XL Release [Description|Interface] plugin.
-
-See the [XL Release reference manual](https://docs.xebialabs.com/xl-release) for background information on XL Release and release automation concepts.
-or
 See the [XL Deploy reference manual](https://docs.xebialabs.com/xl-deploy) for background information on XL Deploy and deployment automation concepts.
 
 ## Overview
