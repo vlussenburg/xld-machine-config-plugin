@@ -3,6 +3,9 @@ deploy:
   provider: releases
   api_key:
     secure: gpdqnT35gEvUU6Xcj+yPszKXyGhDA6hDUbGuU0XiDNqPuqkuTxDI17qSzD68fu1ZqUwBJUGPOKWvUw7x+3fG4WV8sf+pbMf+b8uMzsbufZXRXzsHv3iDk4ImzSzw1ALrPhuP7gzSiBbz4hjKIrXqrJ01v8Lts/HWNBA5BWKJL49hlv5LTDLS705tO3mUG0IZdIZ4lASOoDFhvVBsN4KlQ9POCnCGOIZ9Zur2RaPdxYyzJTxONR+tnFunVjIfP0yWM23lufGVnZ09pzUNt9MTa8S4Av3VgNmKOhcT5S8CIAZffArYlNrEvBn/RgAesuFnpWidclSB6tq+Iq17HPunC3OxufUr1nx7fakccP7sifdN9MWYqo/RLnNiE72sSjNH6ngVDrx6gGUyf73xGR83U5u+piJKmgcbeDlUWxpEzWAPYiOEQvgBHfOusIYc1PZ3tGf4c/Uai94laa7pVM/5LxltK1xuDCrFy+QYCIq7MtIjERYKQLvH9VlJmGYclUfSvijxEZv+UXE5jMu8R+Fj7RxjrdS65ZuaGzy0sp+/8RVbsPj9RiEysKS8YLkv5dxiOTmWES4zd08j8PD1iWApuGBsoEzYNiX+02tJZDDqUvxe/d9ByjTAwmoLHv4xsUBVbqtuwYHKqIApJpdQuU7Q8WRK96L9pHPoyJgay0DWMEs=
-  file: build/distributions/xld-machine-config-plugin-1.1.0.xldp
+  file_glob: true
+  file: build/distributions/*.xldp
+  skip_cleanup: true
   on:
+    tags: true
     repo: xebialabs-community/xld-machine-config-windows-plugin
